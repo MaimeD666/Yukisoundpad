@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup><Configuration Condition="'$(Configuration)' == ''">Release</Configuration><Platform>x64</Platform><OutputType>WinExe</OutputType><AssemblyName>YukisPad</AssemblyName><RootNamespace>YukisPad</RootNamespace><TargetFrameworkVersion>v4.8</TargetFrameworkVersion><OutputPath>build\</OutputPath><PlatformTarget>x64</PlatformTarget><Optimize>true</Optimize><ApplicationManifest>src\app.manifest</ApplicationManifest><ApplicationIcon>src\app.ico</ApplicationIcon></PropertyGroup>
+  <ItemGroup><Reference Include="System"/><Reference Include="System.Core"/><Reference Include="System.Runtime.Serialization"/><Reference Include="System.Xaml"/><Reference Include="System.Windows.Forms"/><Reference Include="System.Drawing"/><Reference Include="WindowsBase"/><Reference Include="PresentationCore"/><Reference Include="PresentationFramework"/></ItemGroup>
+  <ItemGroup><Compile Include="src\*.cs"/><EmbeddedResource Include="src\*.xaml"><LogicalName>YukisPad.%(Filename)%(Extension)</LogicalName></EmbeddedResource><None Include="src\YukisPad.exe.config"><Link>YukisPad.exe.config</Link><CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory></None></ItemGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets"/>
+</Project>
