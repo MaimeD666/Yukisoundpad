@@ -1,0 +1,10 @@
+build/
+release/
+obj/
+data/
+*.log
+*.user
+.vs/
+.tools/
+# Local installation diagnostics
+scripts/trace-install.ps1
